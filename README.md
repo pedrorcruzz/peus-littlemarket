@@ -1,11 +1,11 @@
-# Peu's littleMarket
-Peu's littleMarket is a project developed for college, simulating a complete ecommerce system. The backend is built with Django, using PostgreSQL as the database and Tailwind CSS for responsive design. The goal is to provide a simple and efficient shopping experience, with a modern and functional interface.
-
 ## License
 
 This project is licensed under the [Apache License 2.0](./LICENSE).
 
+# Peu's littleMarket
+Peu's littleMarket is a project developed for college, simulating a complete ecommerce system. The backend is built with Django, using PostgreSQL as the database and Tailwind CSS for responsive design. The goal is to provide a simple and efficient shopping experience, with a modern and functional interface.
 
+#### STATUS: IN PROGRESS
 
 ## Features
 
