@@ -148,4 +148,20 @@ DB_PORT=5432
    Access the application at `http://127.0.0.1:8000/`.
 
 
+## Using Makefile (optional)
 
+You can automate the migration and server startup process with the `Makefile`.
+
+### To apply migrations (including makemigrations and migrate):
+
+```bash
+make run-migrate
+
+```
+
+### To start the development server::
+
+```bash
+make run-server
+
+```
