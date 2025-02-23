@@ -159,7 +159,7 @@ make run-migrate
 
 ```
 
-### To start the development server::
+### To start the development server:
 
 ```bash
 make run-server
