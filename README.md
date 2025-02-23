@@ -23,6 +23,7 @@ This project is licensed under the [Apache License 2.0](./LICENSE).
 - **django-browser-reload**: Automatically reloads the browser during development.
 - **psycopg2-binary**: PostgreSQL adapter for Python.
 - **django-jazzmin**: A modern Django admin interface.
+- **mypy**: An optional static type checker for Python, helping to enforce type safety and improve code quality.
 
 ## Installation
 
