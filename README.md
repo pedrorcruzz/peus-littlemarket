@@ -19,10 +19,10 @@ Peu's littleMarket is a project developed for college, simulating a complete eco
 - **Django**: A high-level Python web framework for rapid development.
 - **PostgreSQL**: A powerful, open-source relational database system.
 - **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
-- **django-tailwind**: Integrates Tailwind CSS into Django projects.
+- **[django-tailwind](https://github.com/timonweb/django-tailwind/tree/master)**: Integrates Tailwind CSS into Django projects.
 - **django-browser-reload**: Automatically reloads the browser during development.
 - **psycopg2-binary**: PostgreSQL adapter for Python.
-- **django-jazzmin**: A modern Django admin interface.
+- **[django-jazzmin](https://django-jazzmin.readthedocs.io/)**: A modern Django admin interface.
 - **mypy**: An optional static type checker for Python, helping to enforce type safety and improve code quality.
 
 ## Installation
