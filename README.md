@@ -103,3 +103,46 @@ DB_PORT=5432
    Access the application at `http://127.0.0.1:8000/`.
 
 
+## Using Tailwind
+
+To set up Tailwind CSS, follow these steps:
+
+1. Install Tailwind:
+
+   ```bash
+   python manage.py tailwind install
+   ```
+
+2. Start the Tailwind development server:
+
+   ```bash
+   python manage.py tailwind start
+   ```
+
+   This will enable live CSS changes while you work on the frontend.
+
+### Troubleshooting
+
+Sometimes (especially on Windows), the Python executable cannot find the npm binary installed on your system. In this case, you need to set the path to the npm executable in the `settings.py` file manually.
+
+- For Linux/Mac:
+
+   ```python
+   NPM_BIN_PATH = '/usr/local/bin/npm'
+   ```
+
+- For Windows, if `npm` is on `$PATH`, but it’s `npm.cmd` rather than `npm`, you can override the default `NPM_BIN_PATH` like this:
+
+   ```python
+   NPM_BIN_PATH = 'npm.cmd'
+   ```
+
+   Alternatively, for maximum reliability, you can use a fully qualified path:
+
+   ```python
+   NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+   ```
+
+Tailwind CSS requires Node.js to be installed on your machine. Node.js is a JavaScript runtime that allows you to run JavaScript code outside the browser. Most (if not all) of the current frontend tools depend on Node.js.
+
+For more information, check the [Tailwind CSS documentation](https://arc.net/l/quote/lftzfxgn).
