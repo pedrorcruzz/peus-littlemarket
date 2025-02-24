@@ -9,16 +9,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {% tailwind_css %}
+        <script src="{% static 'src/hamburguer.js' %}" defer></script>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Login</a>
-                </li>
-            </nav>
-            {% block content %}{% endblock %}
-        </body>
-    </html>
+        <nav class="bg-zinc-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16 items-center">
+                    <div class="flex-shrink-0">
+                        <a href="/" class="text-xl font-bold">Mercadinho do Peu</a>
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#" class="hover:text-gray-400 transition">Produtos</a>
+                        <a href="#" class="hover:text-gray-400 transition">Sobre</a>
+                        <a href="#" class="hover:text-gray-400 transition">Login</a>
+                        <a href="#" class="hover:text-gray-400 transition">Logout</a>
+                        <a href="#" class="hover:text-gray-400 transition">Cadastrar</a>
+                    </div>
+                    <button id="hamburguer-btn" class="md:hidden cursor-pointer">
+                        <svg class="w-6 h-6 text-white"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="hamburguer-menu"
+                     class="hidden md:hidden flex-col space-y-2 pt-2 pb-4 text-center">
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Home</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Sobre</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Login</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Logout</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Cadastrar</a>
+                </div>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+</html>
