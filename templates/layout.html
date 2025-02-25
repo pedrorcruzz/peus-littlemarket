@@ -16,11 +16,11 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16 items-center">
                     <div class="flex-shrink-0">
-                        <a href="/" class="text-xl font-bold">Mercadinho do Peu</a>
+                        <a href="{% url 'home' %}" class="text-xl font-bold">Mercadinho do Peu</a>
                     </div>
                     <div class="hidden md:flex space-x-8">
-                        <a href=" {% url 'produtos' %}" class="hover:text-gray-400 transition">Produtos</a>
-                        <a href="#" class="hover:text-gray-400 transition">Sobre</a>
+                        <a href="#" class="hover:text-gray-400 transition">Admin</a>
+                        <a href=" {% url 'products' %}" class="hover:text-gray-400 transition">Produtos</a>
                         <a href="#" class="hover:text-gray-400 transition">Login</a>
                         <a href="#" class="hover:text-gray-400 transition">Logout</a>
                         <a href="#" class="hover:text-gray-400 transition">Cadastrar</a>
@@ -37,8 +37,9 @@
                 </div>
                 <div id="hamburguer-menu"
                      class="hidden md:hidden flex-col space-y-2 pt-2 pb-4 text-center">
-                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Home</a>
-                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Sobre</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Admin</a>
+                    <a href="{% url 'products' %}"
+                       class="block py-2 text-white hover:text-gray-400 transition">Produtos</a>
                     <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Login</a>
                     <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Logout</a>
                     <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Cadastrar</a>
