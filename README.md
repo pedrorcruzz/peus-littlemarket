@@ -124,6 +124,13 @@ make run-server
 
 ```
 
+### To start the development tailwind:
+
+```bash
+make start-tailwind
+
+```
+
 ## Using Tailwind
 
 To set up Tailwind CSS, follow these steps:
