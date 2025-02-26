@@ -1120,7 +1120,6 @@ select {
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  text-decoration: none;
 }
 
 .hover\:text-gray-400:hover {
