@@ -1,5 +1,4 @@
-
-.PHONY: run-server migrate makemigrations run-migrate
+.PHONY: run-server migrate makemigrations run-migrate start-tailwind build-tailwind
 
 PYTHON = python
 MANAGE = $(PYTHON) manage.py
@@ -15,3 +14,6 @@ migrate:
 
 run-migrate:
 	$(MAKE) makemigrations && $(MAKE) migrate
+
+start-tailwind:
+	${MANAGE} tailwind start
