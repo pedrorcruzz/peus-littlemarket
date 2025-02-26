@@ -1,3 +1,10 @@
 {% extends 'layout.html' %}
+{% load static tailwind_tags %}
 {% block title %}Home{% endblock %}
+{% block links %}{{ block.super }}{% endblock %}
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'src/carousel.js' %}" defer></script>
+{% endblock %}
+{% tailwind_css %}
 {% block content %}{% endblock %}
