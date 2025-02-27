@@ -53,18 +53,40 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-JAZZMIN_SETTINGS = {
-    "site_title": "Mercadinho do Peu",
-    "site_header": "Mercadinho do Peu",
-    "site_brand": "Mercadinho do Peu",
-    "welcome_sign": "Painel de Controle",
-    "copyright": "Mercadinho do Peu",
-    "show_ui_builder": True,
-    "logout_redirect_url": "/",
-    "search_bar": True,
-    # "site_logo": "static/img/logo.png",
-    # "site_icon": "static/img/favicon.ico",
+JAZZMIN_UI_TWEAKS = {
+    "theme": "simplex",
 }
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Painel Administrativo",
+    "site_header": "Administração",
+    "site_brand": "Mercadinho do Peu",
+    # "site_logo": "img/logo.png",  
+    "welcome_sign": "Bem-vindo ao Mercadinho do Peu",
+    "copyright": "Mercadinho do Peu",
+    "search_model": "apps.products", 
+
+    "custom_links": {
+        "apps": [
+            {
+                "name": "Gerenciar Produtos",
+                "url": "admin:app_product_changelist",
+                "icon": "fa-box",
+            }
+        ]
+    },
+
+    "models": {
+        "apps.products": {
+            "name": "Produtos", 
+            "icon": "fa-box",
+            "add_button": True,
+            "change_button": True,
+            "delete_button": True,
+        }
+    }
+}
+
 
 
 MIDDLEWARE = [

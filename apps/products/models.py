@@ -10,6 +10,8 @@ class Product(models.Model):
 
     class Meta:
         db_table = "products" 
+        verbose_name = "Produto"
+        verbose_name_plural = "Produtos"
 
     def __str__(self) -> str:
         return self.name
