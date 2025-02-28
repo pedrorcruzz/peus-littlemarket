@@ -1,10 +1,37 @@
 {% extends 'layout.html' %}
-{% load static tailwind_tags %}
+{% load static %}
 {% block title %}Home{% endblock %}
 {% block links %}{{ block.super }}{% endblock %}
 {% block scripts %}
     {{ block.super }}
     <script src="{% static 'src/carousel.js' %}" defer></script>
 {% endblock %}
-{% tailwind_css %}
-{% block content %}{# deixar para depois #}{% endblock %}
+{% block content %}
+    <section class=" mt-16">
+        <div class="relative">
+            <div class="carousel-container">
+                <div class="carousel-items flex transition-transform duration-500 ease-in-out">
+                    {% for product in products %}
+                        {% if product.image %}
+                            <div class="carousel-item w-full flex-shrink-0 text-center">
+                                <div class="product-card bg-white p-6 rounded-lg shadow-xl transition-shadow duration-300">
+                                    <img src="{{ product.image.url }}"
+                                         alt="{{ product.name }}"
+                                         class="w-full h-auto max-w-[40vw] max-h-[250px] mx-auto object-contain rounded-md mb-2">
+                                    <p class="text-black text-lg font-semibold">{{ product.name }}</p>
+                                    <p class="text-black text-lg font-semibold">R$: {{ product.price }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="carousel-prev absolute left-12 top-1/2 transform -translate-y-1/2 text-white bg-black p-4 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300">
+                &#10094;
+            </button>
+            <button class="carousel-next absolute right-12 top-1/2 transform -translate-y-1/2 text-white bg-black p-4 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300">
+                &#10095;
+            </button>
+        </div>
+    </section>
+{% endblock %}

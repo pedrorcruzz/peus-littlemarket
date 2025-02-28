@@ -15,17 +15,22 @@
         {% endblock %}
     </head>
     <body>
-        <nav class="bg-zinc-900 text-white">
+        <nav class="bg-zinc-900 text-white fixed w-full top-0 z-10 p-0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
+                <div class="flex justify-between items-center h-16">
                     <div class="flex-shrink-0">
-                        <a href="{% url 'home' %}" class="text-xl font-bold">Mercadinho do Peu</a>
+                        <a href="{% url 'home' %}" class="text-xl font-bold mr-3">MP</a>
                     </div>
-                    <div class="hidden md:flex space-x-8">
-                        <a href="admin/" class="hover:text-gray-400 transition">Admin</a>
-                        <a href=" {% url 'products' %}" class="hover:text-gray-400 transition">Produtos</a>
+                    <div class="relative mx-auto flex-grow max-w-xl">
+                        <input type="text"
+                               class="w-full py-2 pl-6 pr-4 rounded-lg bg-zinc-800 text-white focus:outline-none focus:ring-1 focus:ring-gray-400"
+                               placeholder="Buscar produtos..." />
+                    </div>
+                    <div class="hidden md:flex space-x-8 ml-auto">
+                        <a href="{% url 'admin:index' %}" class="hover:text-gray-400 transition">Admin</a>
+                        <a href="{% url 'about' %}" class="hover:text-gray-400 transition">Sobre nos</a>
                         <a href="#" class="hover:text-gray-400 transition">Login</a>
-                        <a href="#" class="hover:text-gray-400 transition">Logout</a>
+                        <a href="#" class="hover:text-gray-400 transition">Sair</a>
                         <a href="#" class="hover:text-gray-400 transition">Cadastrar</a>
                     </div>
                     <button id="hamburguer-btn" class="md:hidden cursor-pointer">
@@ -42,10 +47,9 @@
                      class="hidden md:hidden flex-col space-y-2 pt-2 pb-4 text-center">
                     <a href="admin/"
                        class="block py-2 text-white hover:text-gray-400 transition">Admin</a>
-                    <a href="{% url 'products' %}"
-                       class="block py-2 text-white hover:text-gray-400 transition">Produtos</a>
+                    <a href="{% url 'about' %}" class="hover:text-gray-400 transition">Sobre nos</a>
                     <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Login</a>
-                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Logout</a>
+                    <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Sair</a>
                     <a href="#" class="block py-2 text-white hover:text-gray-400 transition">Cadastrar</a>
                 </div>
             </div>

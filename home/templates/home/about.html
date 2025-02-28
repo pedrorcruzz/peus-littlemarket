@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block links %}{{ block.super }}{% endblock %}
+{% block scripts %}{{ block.super }}{% endblock %}
+{% block content %}
+    <section class="h-[90vh] bg-gradient-to-b from-gray-800 to-black flex items-center justify-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+            <!-- Lado esquerdo -->
+            <div class="text-white text-center md:text-left space-y-4">
+                <h1 class="text-4xl md:text-5xl font-bold">Mercadinho do Peu</h1>
+                <p class="text-lg">O melhor do bairro</p>
+                <p class="text-lg">Venha já comprar com a gente</p>
+                <a href="#"
+                   class="mt-4 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">Sobre nos</a>
+            </div>
+            <div class="mt-10 md:mt-0">
+                <img src="{% static 'images/peu.jpg' %}"
+                     alt="Logo Mercadinho do Peu"
+                     class="w-48 md:w-64 animate-bounce" />
+            </div>
+        </div>
+    </section>
+{% endblock %}
