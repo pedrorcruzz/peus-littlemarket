@@ -1,6 +1,6 @@
 .PHONY: run-server migrate makemigrations run-migrate start-tailwind build-tailwind
 
-PYTHON = python
+PYTHON = python3
 MANAGE = $(PYTHON) manage.py
 
 run-server:
